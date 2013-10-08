@@ -1,4 +1,5 @@
-A simple consensus sequence search with required letters.
+consensus_search.py: A simple consensus sequence search with required letters.
+------------------------------------------------------------------------------
 
 Information
 ===========
@@ -8,6 +9,15 @@ also requiring a particular 3' sequence.
 
 Under the hood, we use pygr (for loading the genome) and motility (for
 performing the search).
+
+
+Download
+========
+
+If you're on our `github page <https://github.com/uci-cbcl/consensus_search/>`_, 
+you can click on the "Download Zip" button.  Otherwise, try this link::
+
+   https://github.com/uci-cbcl/consensus_search/archive/master.zip
 
 
 Usage
