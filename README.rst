@@ -54,16 +54,16 @@ G            Guanine
 T            Thymine
 U            Uracil (converted to T for DNA search)
 R            Purine (A or G)
-Y            Pyrimidine (C, T, or U)
+Y            Pyrimidine (C or T)
 M            C or A
-K            T, U, or G
-W            T, U, or A
+K            T, or G
+W            T, or A
 S            C or G
-B            C, T, U, or G (not A)
-D            A, T, U, or G (not C)
-H            A, T, U, or C (not G)
-V            A, C, or G (not T, not U)
-N            Any base (A, C, G, T, or U)
+B            C, T, or G (not A)
+D            A, T, or G (not C)
+H            A, T, or C (not G)
+V            A, C, or G (not T)
+N            Any base (A, C, G, or T)
 ==========   ==============
 
 
