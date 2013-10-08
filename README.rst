@@ -1,4 +1,4 @@
-consensus_search.py: A simple consensus sequence search with required letters.
+A very simple consensus sequence search with required letters.
 ------------------------------------------------------------------------------
 
 Information
