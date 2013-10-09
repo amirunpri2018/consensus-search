@@ -77,9 +77,7 @@ For additional usage instructions, run::
 
 Or shoot me an email at jake.biesinger@gmail.com
 
-
 """
-
 
 __author__ = "Jake Biesinger, jake.biesinger@gmail.com"
 __license__ = "Apache"
@@ -113,14 +111,16 @@ REQUIRED_SCORES = {k: [elem * 1000000 for elem in v]
 
 def make_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--genome", help="fasta file with genome to search")
-    parser.add_argument("--mismatches",
+    parser.add_argument("--genome", required=True,
+                        help="fasta file with genome to search")
+    parser.add_argument("--mismatches", required=True, type=int,
                         help="The number of mismatches to allow")
-    parser.add_argument("--consensus",
+    parser.add_argument("--consensus", required=True,
                         help="The consensus sequence to search for")
-    parser.add_argument("--required_3p_seq",
+    parser.add_argument("--required_3p_seq", required=True,
                         help="the sequence *required* on the 3' end")
-    parser.add_argument("--outfile", help="where to save the results")
+    parser.add_argument("--outfile", required=True,
+                        help="where to save the results")
     return parser
 
 
@@ -128,6 +128,7 @@ def main(argv=None):
     parser = make_parser()
     args = parser.parse_args(argv)
     genome = SequenceFileDB(args.genome)
+
 
     pwm = [IUPAC_SCORES[l] for l in args.consensus]
     pwm.extend([REQUIRED_SCORES[l] for l in args.required_3p_seq])
@@ -147,4 +148,4 @@ def main(argv=None):
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    main()
