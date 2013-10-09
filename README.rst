@@ -39,8 +39,9 @@ Finally, you can reproduce the results from the paper by running::
             --consensus GGAACTGGCCCCTGCAAACA --required_3p_seq NGG --mismatches 5 \
             --outfile results.bed
 
-Which will search for the tyrosine site #2 (consensus sequence) with the
-N[A/C]GG sequence at the 3' end.  
+This search will allow up to 5 mismatches to the tyrosinase site above enforcing  a degenerate
+NGG PAM sequence at the 3' end. To search for mismatch sites to your own target site of
+interest, substitute your sequence in place of the above consensus after --consensus.
 
 Note that any of the IUPAC letters can be used in the 
 consensus and required sequences. Specifically,
