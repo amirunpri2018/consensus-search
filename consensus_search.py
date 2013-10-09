@@ -1,3 +1,7 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
 #!/usr/bin/env python
 
 """
@@ -42,9 +46,10 @@ Finally, you can reproduce the results from the paper by running::
             --consensus GGAACTGGCCCCTGCAAACA --required_3p_seq NGG --mismatches 5 \
             --outfile results.bed
 
-This search will allow up to 5 mismatches to the tyrosinase site above enforcing  a degenerate
-NGG PAM sequence at the 3' end. To search for mismatch sites to your own target site of
-interest, substitute your sequence in place of the above consensus after --consensus.
+This script will search for mismatches to the tyrosinase site above allowing for a
+degenerate NGG PAM sequence at the 3' end. To search for mismatch sites to your own
+target site of interest, substitute your sequence in place of the above consensus when 
+prompted.
 
 Note that any of the IUPAC letters can be used in the 
 consensus and required sequences. Specifically,
@@ -75,6 +80,9 @@ N            Any base (A, C, G, or T)
 For additional usage instructions, run::
 
     python consensus_search.py --help
+    
+This script is also available at https://github.com/uci-cbcl/consensus-search
+and any updates can be found there.
 
 Or shoot me an email at jake.biesinger@gmail.com
 
