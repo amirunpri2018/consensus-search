@@ -148,6 +148,9 @@ def main(argv=None):
         for chrom in genome.keys():
             chromseq = str(genome[chrom])
             print "searching ", chrom, "of length", len(chromseq)
+            if len(chromseq) < len(pwm):
+                print 'chromosome/fragment', chrom, 'is too short'
+                continue
             matches = pwm.find(chromseq, -args.mismatches)
             for start, stop, strand, seq in matches:
                 score = pwm.calc_score(seq)
